@@ -1,0 +1,319 @@
+:root {
+  --primary-color: #4CAF50;
+  --primary-dark: #388E3C;
+  --primary-light: #A5D6A7;
+  --secondary-color: #FFC107;
+  --secondary-dark: #FFA000;
+  --danger-color: #F44336;
+  --text-color: #212121;
+  --text-light: #757575;
+  --background-color: #F5F5F5;
+  --card-color: #FFFFFF;
+  --border-color: #E0E0E0;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header styles */
+.app-header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+.app-header h1 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.header-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 600px;
+}
+
+/* Button styles */
+.primary-button, .secondary-button, .danger-button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.primary-button {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+}
+
+.primary-button:hover {
+  background-color: var(--secondary-dark);
+}
+
+.secondary-button {
+  background-color: white;
+  color: var(--primary-dark);
+  border: 1px solid var(--border-color);
+}
+
+.secondary-button:hover {
+  background-color: var(--background-color);
+}
+
+.danger-button {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.danger-button:hover {
+  background-color: #d32f2f;
+}
+
+/* Sort dropdown */
+.sort-dropdown {
+  padding: 0.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background-color: white;
+  flex-grow: 1;
+}
+
+/* Main container */
+#app-container {
+  padding: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Screen styles */
+.screen {
+  display: none;
+}
+
+.screen.active {
+  display: block;
+}
+
+/* Product list styles */
+.product-list-container {
+  margin-bottom: 1rem;
+}
+
+.product-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.product-item {
+  background-color: var(--card-color);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px var(--shadow-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-details {
+  flex-grow: 1;
+}
+
+.product-name {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.product-store, .product-date {
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+
+.product-price {
+  font-weight: 600;
+  text-align: right;
+}
+
+.standardized-price {
+  color: var(--primary-dark);
+  font-size: 0.9rem;
+}
+
+/* Form styles */
+.item-form {
+  background-color: var(--card-color);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px var(--shadow-color);
+}
+
+.form-field {
+  margin-bottom: 1rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.form-field.half {
+  flex: 1;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-weight: 500;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-family: var(--font-family);
+  font-size: 1rem;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+/* Comparison screen */
+.comparison-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.comparison-product-name {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.comparison-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Total container */
+.total-container {
+  background-color: var(--card-color);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px var(--shadow-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+}
+
+.total-amount {
+  color: var(--primary-dark);
+}
+
+/* Filter dropdown */
+.filter-dropdown {
+  background-color: var(--card-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px var(--shadow-color);
+  width: 300px;
+  max-width: 100%;
+  z-index: 1000;
+}
+
+.filter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.filter-header h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.filter-section {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+
+/* Utility classes */
+.hidden {
+  display: none;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 2rem;
+  color: var(--text-light);
+}
+
+.loading-indicator {
+  text-align: center;
+  padding: 1rem;
+  color: var(--text-light);
+}
+
+/* Responsive styles */
+@media (min-width: 768px) {
+  .app-header {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+  }
+  
+  .app-header h1 {
+    margin: 0;
+    text-align: left;
+  }
+  
+  .header-buttons {
+    justify-content: flex-end;
+  }
+} 
