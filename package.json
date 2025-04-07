@@ -1,0 +1,44 @@
+{
+  "name": "raw-food-tracker",
+  "version": "1.0.0",
+  "description": "A price tracker for raw vegan food products",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "webpack serve --mode development",
+    "build": "webpack --mode production",
+    "serve": "serve -s dist",
+    "test": "jest",
+    "lint": "eslint src",
+    "clean": "rm -rf dist node_modules",
+    "rebuild": "npm run clean && npm install && npm run build"
+  },
+  "keywords": [
+    "raw",
+    "vegan",
+    "food",
+    "price",
+    "tracker"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "dexie": "^3.2.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.21.0",
+    "@babel/preset-env": "^7.20.2",
+    "babel-loader": "^9.1.2",
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.7.3",
+    "eslint": "^8.35.0",
+    "html-webpack-plugin": "^5.5.0",
+    "jest": "^29.5.0",
+    "mini-css-extract-plugin": "^2.7.2",
+    "serve": "^14.2.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.11.1",
+    "workbox-webpack-plugin": "^6.5.4"
+  }
+} 
